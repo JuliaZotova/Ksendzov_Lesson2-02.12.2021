@@ -1,0 +1,238 @@
+GIT Homework 1 - Lesson 2 (02.12.2021)
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+во вкладке Repositories создать новый репозиторий кнопкой "New" и назвать его JSON
+скопировать адрес репозитория, нажав зелёную кнопку Code и выбрав HTTPS
+
+ 5. Клонировать репозиторий JSON на локальный компьютер.
+в GitBash, находясь в нужной нам папке, ввести команду 
+git clone http_adress
+
+ 6. Внутри локального JSON создать файл “new.json”.
+cd git_folder_name
+touch new.json
+
+ 7. Добавить файл под гит.
+git status - для проверки - изменения выделяются красным цветом
+git add file_name - добавление конкретного файла
+git add . - добавление всех новых файлов
+git status - все новые файлы должны быть выделены зелёным цветом
+
+ 8. Закоммитить файл.
+git commit -m "comment"
+
+ 9. Отправить файл на внешний GitHub репозиторий.
+git push
+""
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+vim file_name - редактирование файла в редакторе GitBash
+{
+
+        "name": "Julia",
+        "surname": "Zotova",
+        "age": 43,
+        "amount of pets": 1,
+        "desired salary amount": "a lot"
+
+}
+
+ 11. Отправить изменения на внешний репозиторий.
+git status
+git commit -am "added information about myself" (-am позволяет одной командой сделать add и commit)
+git push
+
+ 12. Создать файл preferences.json
+touch preferences.json
+
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+vim preferences.json
+I - insert
+{
+	"favorite movie" : "Forrest Gump",
+	"favorite series" : "TBBT",
+	"favorite dishe" : "kebab",
+	"favorite season of year" : "Summer",
+	"favorite country" : "Great Britain"
+}
+esc
+:wq - wright and quit
+
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+touch skills.json
+vim skills.json
+{
+	"hard skills" : [
+	"GIT",
+	"Postman",
+	"JavaScript",
+	"Charles",
+	"Jira",
+	"Android Studio"
+	],
+	"soft skills" : [
+	"dicipline",
+	"curiosity",
+	"test-cases"
+	]
+}
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+git status
+git commit -am "added my preferences and courses skills"
+git push
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+в основном репозитории нажать Add file - написать имя файла bug_report.json
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+поставить все необходимые отметки по приватности или публичности, написать комментарий, если необходимо
+нажать зелёную кнопку Commit new file
+Файл появляется в списке файлов репозитория main
+
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+зайти в файл и нажать иконку редактирования
+внести данные
+{
+"Bug Report": "sample",
+	"Bug ID": 633,
+	"Bug Name": "CART - Unable to add new item to my cart", 
+	"Summary": "When my cart contains one item, I am unable to add a second item via the add to cart button on a product page",
+	"Submit Date": "11.12.2021",           
+	"Reporter": "Julia Zotova",       
+	"Platform": "Windows",                    
+	"Operating System": "Win 10",
+	"Browser": "Google Chrome",     
+	"URL": "site-adress",        
+	"Description": "unable to add a second item",
+
+	"Steps to reproduce": [
+	"add one item to cart", 
+	"go to product abc via the search bar",
+	"add new item to cart via "add to cart" button (see screenshot)",
+	"go to cart"
+	],
+
+	"Expected result": "The cart should contain 2 items",
+	"Actual result": "The cart contains only 1 item"
+}
+
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+нажать зелёную кнопку Commit changes, добавив принеобходиомтси комментарии и выбрав доступ
+
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+git fetch
+git pull
+
+XML
+ 21. Создать внешний репозиторий c названием XML.
+создать новый репозиторий XML
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+скопировать https репозитория на вебе
+git clone https//...
+
+ 23. Внутри локального XML создать файл “new.xml”.
+touch new.xml
+
+ 24. Добавить файл под гит.
+git status
+git add .
+
+ 25. Закоммитить файл.
+git commit -m "created file new.xml"
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+git push
+git status - для проверки
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+vim new.xml
+i - Insert
+<xml>
+        <name>Julia</name>,
+        <surname>Zotova</surname>,
+        <age>43</age>,
+        <amount_of_pets>1</amount_of_pets>,
+        <desired_salary_amount>a_lot"</desired_salary_amount>
+esc
+:wq
+
+ 28. Отправить изменения на внешний репозиторий.
+git status
+git add .
+git commit -m "added information about myself"
+git push
+git status
+
+ 29. Создать файл preferences.xml
+touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+vim preferences.xml
+i
+<xml>
+	<favorite_movie>Forrest Gump</favorite_movie>,
+	<favorite_series>TBBT</favorite_series>,
+	<favorite_dishe>kebab</favorite_dishe>,
+	<favorite_season_of_year>Summer</favorite_season_of_year>,
+	<favorite_country>Great Britain</favorite_country>
+
+esc
+:wq
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+touch skills.xml
+vim skills.xml
+i
+
+<xml>
+<hard_skills>GIT,Postman,JavaScript,Charles,Jira,Android Studio</hard_skills>
+<soft_skills>dicipline,curiosity,test-cases</soft_skills>
+
+esc
+:wq
+
+ 32. Сделать коммит в одну строку.
+git commit -am "created files preferences.xml and skills.xml"
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+в основной ветке add file - bug_report.xml
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+кнопка Commit file
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+<xml>
+//Bug_Report_sample,
+	<Bug_ID>633</Bug_ID>,
+	<Bug_Name>CART - Unable to add new item to my cart</Bug_Name>, 
+	<Summary>When my cart contains one item, I am unable to add a second item via the add to cart button on a product page</Summary>,
+	<Submit_Date>11.12.2021</Submit_Date>,           
+	<Reporter>Julia Zotova</Reporter>,       
+	<Platform>Windows</Platform>,                    
+	<Operating_System>Win 10</Operating_System,
+	<browser>Google Chrome</browser>,     
+	<URL>site-adress</URL>,        
+	<Description>unable to add a second item</Description>,
+
+	<Steps_to_reproduce>
+    add one item to cart, 
+    go to product abc via the search bar,
+    add new item to cart via "add to cart" button (see screenshot),
+    go to cart
+	</Steps_to_reproduce>
+	
+
+	<Expected_result>The cart should contain 2 items</Expected_result>,
+	<Actual_result>The cart contains only 1 item</Actual_result>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+кнопка Commit changes
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+git fetch
+git pull
